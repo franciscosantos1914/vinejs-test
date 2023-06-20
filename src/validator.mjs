@@ -7,6 +7,5 @@ export async function credentials(data) {
     password: vine.string().minLength(8).maxLength(32).confirmed(),
   });
 
-  const output = await vine.validate({ schema, data });
-  return output;
+  await vine.validate({ schema, data });
 }
